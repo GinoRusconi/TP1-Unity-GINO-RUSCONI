@@ -1,0 +1,13 @@
+Tanto el jugador como los enemigos al ser impactados por una bala su vida reduce junto a su color, para tener una referencia visual del impacto.
+Las torretas no pueden ser destruidas y disparan cuando tu cañón esta completamente en rojo.
+Las paredes finas y altas pueden ser destruidas. Al ser impactadas reducen su vida junto a su color.
+Al Ganar un nivel se pasa al siguiente, si este es el último vuelve al primero.
+Al Perder ( jugador perdió toda tu vida ) se vuelve a cargar el mismo nivel en el que te encontrabas.
+
+Nivel1 = Eliminar los 3 enemigos.
+
+Nivel2 = Eliminar 5 enemigos.
+
+Nivel3 = Sobrevivir 10 Segundos.
+
+Nivel4 = Eliminar 4 de los 5 enemigos y aguantar 10 segundos.
