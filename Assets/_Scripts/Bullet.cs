@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
     }
     private void Update()
     {
-        transform.Translate(Time.deltaTime * speed * Vector3.up);
+        transform.parent.Translate(Time.deltaTime * speed * Vector3.forward);
     }
 
     void AutoDestruccion()

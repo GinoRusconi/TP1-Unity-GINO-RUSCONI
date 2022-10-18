@@ -8,7 +8,6 @@ public class Player : MonoBehaviour
     public bool isPlayerHealth = true;
     public ParticleSystem deadPlayerParticle;
     public Image _lifeFilled;
-    Renderer _renderer;
     Life _life;
     Shoot _shoot;
     MovimientoPlayer _movimientoPlayer;

@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     EnemyManager enemyManager;
-    Renderer _renderer;
+    Life _life;
+    public Image _lifeFilled;
     private void Awake()
     {
         GameObject _GOenemyManager = GameObject.Find("EnemyManager");
         enemyManager = _GOenemyManager.GetComponent<EnemyManager>();
-        _renderer = GetComponent<Renderer>();
+        _life = GetComponent<Life>();
     }
     void Mori()
     {
@@ -20,7 +22,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamageMe()
     {
-        //Color.RGBToHSV(_renderer.material.color, out float H, out float S, out float V);
-        //_renderer.material.color = Color.HSVToRGB(H , S, V - 0.25f);
+        float porcentaje = (float)_life.currentLife / _life.maxLife;
+        _lifeFilled.fillAmount = porcentaje;
     }
 }

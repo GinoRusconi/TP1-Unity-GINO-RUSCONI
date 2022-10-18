@@ -14,6 +14,7 @@ public class WallCannon : MonoBehaviour
     Renderer renderSetStart;
     public float timeToShootSet= 1f;
     float timeToShoot;
+    AudioSource audioSource;
 
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class WallCannon : MonoBehaviour
         _renderer = cannon.GetComponent<Renderer>();
         renderSetStart = _renderer;
         _renderer.material.color = Color.white;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -36,6 +38,7 @@ public class WallCannon : MonoBehaviour
         if (timeToShoot >= timeToShootSet)
         {
             GameObject bulletPrefab =Instantiate(prefabBullet, bulletOutPosition.transform.position, bulletOutPosition.rotation);
+            audioSource.Play();
             bulletPrefab.GetComponentInChildren<Bullet>().tagToDamage = tagToDamage;
             _renderer = renderSetStart;
             timeToShoot = 0;

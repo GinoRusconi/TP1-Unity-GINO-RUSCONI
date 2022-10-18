@@ -524,7 +524,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f1425b1a45a57fb47a4324c3fbe9ebb2, type: 2}
+  - {fileID: 2100000, guid: 094c835627124fe4bbbaa762d2240cb1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -622,7 +622,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a852bbdbaf82fd643b68a1a30e10843e, type: 2}
+  - {fileID: 2100000, guid: 5f73475cf0cad364b9800b85c2a229fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -985,7 +985,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a852bbdbaf82fd643b68a1a30e10843e, type: 2}
+  - {fileID: 2100000, guid: 5f73475cf0cad364b9800b85c2a229fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1072,6 +1072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefMenuPause: {fileID: 5131950007338358583, guid: 03e20ada22cfd3446a1194d03e4a26f6, type: 3}
+  previousScene: 0
 --- !u!4 &633315366
 Transform:
   m_ObjectHideFlags: 0
@@ -1178,6 +1179,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6417466709471083413, guid: e143d1e51e03183499aa6d22b5cb3576, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 450302089}
     - target: {fileID: 8755705658894966768, guid: e143d1e51e03183499aa6d22b5cb3576, type: 3}
       propertyPath: m_Name
       value: Enemy1
@@ -1342,7 +1347,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a852bbdbaf82fd643b68a1a30e10843e, type: 2}
+  - {fileID: 2100000, guid: 5f73475cf0cad364b9800b85c2a229fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1456,7 +1461,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a852bbdbaf82fd643b68a1a30e10843e, type: 2}
+  - {fileID: 2100000, guid: 5f73475cf0cad364b9800b85c2a229fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1597,7 +1602,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: El intensidad del color determina la cantidad de vida
+  m_text: La Barra Verde sobre los enemigos muestran su vida
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b900c77ba03fa9b42abbe7b48436b58c, type: 2}
   m_sharedMaterial: {fileID: -7386093160809023667, guid: b900c77ba03fa9b42abbe7b48436b58c, type: 2}
@@ -1738,6 +1743,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1244253599, guid: fd74565982deada42a0a2600b951d60b, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 450302089}
     - target: {fileID: 5910897805765910897, guid: fd74565982deada42a0a2600b951d60b, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -2200,7 +2209,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a852bbdbaf82fd643b68a1a30e10843e, type: 2}
+  - {fileID: 2100000, guid: 5f73475cf0cad364b9800b85c2a229fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3201,6 +3210,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7411743819186983497, guid: dce285b6d45a2b148bca4c6c8730e729, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 450302089}
     - target: {fileID: 8755705658894966768, guid: dce285b6d45a2b148bca4c6c8730e729, type: 3}
       propertyPath: m_Name
       value: Enemy2

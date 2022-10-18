@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager;
     public GameObject prefMenuPause;
     private GameObject _menuPause;
+    public int previousScene;
 
     private void Awake()
     {
@@ -26,7 +27,10 @@ public class GameManager : MonoBehaviour
     public void OpenMenuPause()
     {
         if (_menuPause == null)
+        {
             _menuPause = Instantiate(prefMenuPause);
+            Time.timeScale = 0f;
+        }
         if (_menuPause != null && _menuPause.activeSelf == false)
         {
             Time.timeScale = 0f;
@@ -43,6 +47,7 @@ public class GameManager : MonoBehaviour
 
     public void GameLose()
     {
+        previousScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene("GameOver");
     }
 

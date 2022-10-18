@@ -16,7 +16,7 @@ public class MenuControll : MonoBehaviour
 
     public void NextScene()
     {
-        SceneManager.LoadSceneAsync(CurrentScene().buildIndex + 1);
+        StartCoroutine(SceneLoaded(CurrentScene().buildIndex + 1, soundButton.clip != null ? soundButton.clip.length : 0));
     }
 
     public Scene CurrentScene()
@@ -26,7 +26,7 @@ public class MenuControll : MonoBehaviour
 
     public void ResetLevel()
     {
-        SceneManager.LoadScene(CurrentScene().buildIndex);
+        StartCoroutine(SceneLoaded(GameManager.gameManager.previousScene, soundButton.clip.length));
     }
 
     public void Continue()
@@ -36,7 +36,7 @@ public class MenuControll : MonoBehaviour
     }
     public void GoMenuInicial()
     {
-        SceneManager.LoadScene(0);
+        StartCoroutine(SceneLoaded(0, soundButton.clip.length));
     }
 
     public void OpenCanvas(GameObject canvasToOpen)
@@ -67,5 +67,12 @@ public class MenuControll : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    IEnumerator SceneLoaded(int sceneIndex, float timeSound)
+    {
+        Time.timeScale = 1f;
+        yield return new WaitForSeconds(timeSound);
+        SceneManager.LoadScene(sceneIndex);
     }
 }

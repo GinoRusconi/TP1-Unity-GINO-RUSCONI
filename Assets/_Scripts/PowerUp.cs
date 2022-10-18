@@ -6,11 +6,16 @@ public class PowerUp : MonoBehaviour
 {
     public PowerUps _myPowerUP;
     public int value;
+    AudioSource _audioSource;
     public enum PowerUps
     {
         Life,
         Damage,
         Speed
+    }
+    private void Awake()
+    {
+        _audioSource = GetComponentInParent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,6 +36,7 @@ public class PowerUp : MonoBehaviour
                 default:
                     break;
             }
+            _audioSource.Play();
             Destroy(gameObject);
         }
     }
